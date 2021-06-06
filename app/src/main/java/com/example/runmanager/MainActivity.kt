@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         list.adapter = adapter
         list.onItemClickListener  = AdapterView.OnItemClickListener { parent, view, position, id ->
             val intent :Intent = Intent(applicationContext, ListDetail::class.java)
+            intent.putExtra("position", position)
             startActivity(intent)
         }
 
